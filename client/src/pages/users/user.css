@@ -1,0 +1,23 @@
+.userss{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,4fr));
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.inputs{
+    padding: 4rem 12rem;
+}
+
+.inputs input{
+    border: 1px solid #22222232;
+    padding: 1rem;
+    width: 700px;
+    border-radius: 1rem;
+}
+
+.left-arrow{
+    position: absolute;
+    background-color: #222222;
+    padding: 2rem;
+}

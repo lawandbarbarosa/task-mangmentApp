@@ -1,0 +1,123 @@
+.home{
+    display: flex;
+    width: 100%;
+}
+
+.left-sidehome{
+    background-color: #FAFAFA;
+    width: 400px;
+    height: 100vh
+}
+
+.profile-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #22222212 ;
+    border-radius: 2rem;
+}
+
+.profile-home img{
+    background-color: #FAFAFA;
+    width:200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.taks-forms{
+    display: flex;
+    flex-wrap: wrap;
+    gap:3rem;
+}
+
+.edit{
+    margin-top: 4rem;
+    color: tomato;
+    font-size: 1rem;
+}
+
+.aprofile-leftside-footer{
+    display:flex ;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.pro{
+    display: flex;
+    align-items: center;
+    background: #222222;
+    padding:.5rem .7rem;
+    width: 250px;
+   color: #ffff;
+   gap: 2rem;
+   font-size: 2rem;
+}
+
+.right-sidehome{
+    width: 1700px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 2rem;
+}
+
+.addd{
+    background: #222222e0;
+    padding: 0.9rem;
+    border-radius: 1rem;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.addd button{
+    font-size: 2rem;
+}
+
+.right-sidehome input{
+    border: 1px solid #22222233;
+    padding: 1.3rem;
+    border-radius: 1.4rem;
+    width: 80%;
+    margin-top: 2rem;
+}
+
+.card{
+    background-color: #FCFCFC;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #2222220f;
+}
+
+.card h1{
+  font-size: 2rem;
+  color: tomato;
+  font-weight: 800;
+}
+
+.card p{
+    text-align: left;
+    color: #222222;
+}
+
+.card-footer{
+   margin-top: 15rem;
+   display: flex;
+   align-items: center;
+   gap: 15rem;
+   border-radius:  0 0 0 2rem;
+}
+
+.card-footer span{
+    background-color: #222222;
+    padding: 0.4rem;   
+}
+

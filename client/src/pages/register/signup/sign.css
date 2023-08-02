@@ -1,0 +1,10 @@
+.passwordver{
+    font-size: 1.7rem;
+    border: 1px solid #DEDEDE;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}

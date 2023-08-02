@@ -1,0 +1,127 @@
+.login{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 68vh;
+}
+
+.left-side{
+    flex: 1;
+    width: 50%; 
+  
+}
+
+.right-side{
+    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 17rem;
+}
+
+.right-side h1{
+    font-size: 2rem;
+    font-family: montserrat;
+    font-weight: 700;
+}
+
+.email{
+    display: flex;
+    border: 1px solid #DEDEDE;
+    padding: 1rem;
+    border-radius: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.email img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    
+}
+
+.email input::placeholder{
+    font-size: 1.7rem;
+}
+
+.password input::placeholder{
+    font-size: 1.7rem;
+}
+
+.password{
+    display: flex;
+    border: 1px solid #DEDEDE;
+    padding: 1rem;
+    border-radius: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+    width: 600px;
+    gap: 2rem;
+}
+
+.password img{
+    width: 40px;
+    height:40px;
+    object-fit: contain;
+}
+
+.submitt{
+    margin-top: 2rem;
+    background-color: #26A69A;
+    border-radius: 2rem;
+    padding: 1rem;
+    color:#fff ;
+    font-size: 2rem;
+    width: 200px;
+}
+
+h5{
+    font-size: 2rem;
+    color: #222222;
+    margin-top: 2rem;
+
+}
+
+.doyou{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.aaa{
+    margin-top: 2rem;
+    color: #26A69A;
+    font-size: 1.5rem;
+}
+
+.google{
+    background: #fff;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.14);
+  width: 300px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  border-radius: 2rem;
+}
+
+.google h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.eee{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.xat{
+  border: 1px solid #222222;
+  height: 30px;
+}
