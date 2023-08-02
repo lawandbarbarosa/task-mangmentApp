@@ -2,7 +2,7 @@ require("dotenv").config(); // Load environment variables from .env file
 const express = require("express")
 
 const taks = require("../server/routes/route")
-
+const user = require("../server/routes/userRoute")
 const mongoose = require("mongoose")
 
 const app = express()
@@ -26,7 +26,7 @@ app.use(cors({
 
 // geting route 
 app.use("/api/tasks",taks)
-
+app.use("/api/users",user)
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
