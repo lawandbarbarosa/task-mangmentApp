@@ -49,11 +49,11 @@ Users.statics.signup = async function(email,password,username){
         throw Error ("Please fill all the fields")
     }
 
-    if(!email.isEmail(email)){
+    if(!validator.isEmail(email)){
         throw Error ("invalid email")
     }
 
-    if(!password.isStrong(password)){
+    if(!validator.isStrongPassword(password)){
         throw Error ('Password is too weak please yari asni pebka')
     }
 
@@ -66,7 +66,7 @@ Users.statics.signup = async function(email,password,username){
    const salt = await bcrypt.genSalt(10)
    const hash = await bcrypt.hash(password,salt)
 
-   const user = await this.create({email,password:hash})
+   const user = await this.create({email,password:hash,username})
 
    return user;
 }
