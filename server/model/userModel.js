@@ -21,9 +21,9 @@ const Users = new Schema({
 })
 
 
-Users.statics.login = async function(email,password,username){
+Users.statics.login = async function(email,password,urname){
 
-    if(!email || !password || !username ){
+    if(!email || !password){
         throw Error("please fill all the field")
     }
 

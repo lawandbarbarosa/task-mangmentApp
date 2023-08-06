@@ -9,6 +9,7 @@ import trash from "../../assets/trash.svg"
 import { setTasks,deleteTask,AddToFavourite } from '../../redux/taskSlice'
 import AddingTask from "../../components/AddingTask"
 import {useSelector,useDispatch} from "react-redux"
+import { useLogout } from '../register/hooks/useLogout'
 
 
 
@@ -17,16 +18,23 @@ function Home() {
   const [showTask,setShowTask]=useState(false)
   const [filtering,setFiltering] = useState("")
 
+   const {users} = useSelector((state)=> state.users)
+
   const handleShowTask = ()=>{
     setShowTask(!showTask);
   }
+
 
   const [ark,setArk] = useState([])
 
   //dispatching the action for adding task in redux store
   const dispatch= useDispatch();
 
+  const {Logout} = useLogout()
 
+  const handleClick = ()=>{
+    Logout()
+  }
 
   useEffect(()=>{
     const fetchTasks = async()=>{
@@ -59,10 +67,16 @@ function Home() {
     <div className='home'>
       {showTask && <AddingTask showTask={showTask} setShowTask={setShowTask} /> }
    <div className="left-sidehome section__padding">
-   <div className="profile-home p-4">
+      <div className="profile-home p-4">
     <img src={image} alt="" />
-    <h2> Lawand Barbarosa </h2>
-    <Link className='edit'> edit Profile </Link>
+    { users && (
+       <h2>{users.username}</h2>
+    ) }
+    {users && (
+      <h2>{users.email}</h2>
+    )}
+   
+   { users &&  <Link className='edit'> edit Profile </Link>}
    </div>
    <div className="aprofile-leftside-footer mt-[12rem]">
     <div className="pro">
@@ -73,8 +87,10 @@ function Home() {
       <img src={fav} alt="" />
       <Link to="/fav">favourites</Link>
     </div>
-    <button type='submit' className='mt-[7rem] text-[tomato] 
+    { users  && (
+    <button onClick={handleClick} type='submit' className='mt-[7rem] text-[tomato] 
     items-center justify-center ml-[4rem]'>log out</button>
+    ) }
    </div>
  
    </div>

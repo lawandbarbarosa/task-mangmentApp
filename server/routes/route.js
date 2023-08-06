@@ -1,5 +1,5 @@
 const express = require("express")
-
+const requireAuth = require("../middleware/requireAuth")
 const router = express()
 const {
    getAllTasks,
@@ -7,6 +7,8 @@ const {
    createTask,
    deleteTask,
    UpdateTask} = require("../controller/taskController")
+
+router.use(requireAuth)
 
 // get all tasks
 router.get("/",getAllTasks)

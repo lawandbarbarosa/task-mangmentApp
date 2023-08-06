@@ -18,7 +18,7 @@ router.post("/signup",signUpUser)
 
 
 // geting all user
-router.get("",geAllUsers)
+router.get("/",geAllUsers)
 
 
 router.delete("/:id",deleteUser)

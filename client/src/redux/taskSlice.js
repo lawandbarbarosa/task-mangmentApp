@@ -48,6 +48,7 @@ export const {
    createTask, 
    deleteTask,
    AddToFavourite,
-   deletFromFavourite } = TaskSlice.actions;
+   deletFromFavourite }
+    = TaskSlice.actions;
 
 export default TaskSlice.reducer;

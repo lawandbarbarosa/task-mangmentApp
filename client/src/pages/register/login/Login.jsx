@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import cover from "../../../assets/cover.jpg"
-import email from "../../../assets/email.svg"
-import password from "../../../assets/password.svg"
+import emaill from "../../../assets/email.svg"
+import passwordd from "../../../assets/password.svg"
 import google from "../../../assets/google.svg"
 import "./login.css"
-
+import { useLogin } from '../hooks/useLogin' 
 import { Link } from 'react-router-dom'
 
 
 function Login() {
+
+  const [email,setEmail]=useState("")
+  const [password,setPassword] = useState("")
+
+  const  {Loggin,error,loading} = useLogin()
+
+  const handleSubmit =async (e)=>{
+    e.preventDefault(); 
+
+    await Loggin(email,password)
+  }
 
   return (
     <div className='login '>
@@ -18,17 +29,20 @@ function Login() {
   </div>
   <div className="right-side">
   <h1>Log In</h1>
-    <form className='form' action="">
+    <form className='form' action="" onSubmit={handleSubmit}>
       <div className="all">
       <div className="email">
-      <img src={email} alt="" />
-    <input type="email" placeholder='email....' />
+      <img src={emaill} alt="" />
+    <input value={email} onChange={(e)=> setEmail(e.target.value)}
+     type="email" placeholder='email....' />
     </div>
     <div className="password">
-      <img src={password} alt="" />
-    <input type="email" placeholder='password....' />
+      <img src={passwordd} alt="" />
+    <input value={password} onChange={(e)=> setPassword(e.target.value)} 
+    type="password" placeholder='password....' />
     </div>
-    <button className='submitt' type="submit">login</button>
+    <button disabled={loading} className='submitt' type="submit">login</button>
+    {error && <h1>{error}</h1> }
     <p className='doyou'>do you want to create an account?</p>
     <Link to='signup' className='aaa'>Sign Up</Link>
 
